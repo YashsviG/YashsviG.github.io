@@ -474,3 +474,24 @@ body {
     {
         background-image: url("../../images/banner.jpg");
     }
+/* Paragraph align */
+    
+    .para
+    {
+        margin-left: 33%
+    }
+
+   @media screen and (max-width: 1000px) and (min-width: 600px)
+    {
+        .para
+        {
+            margin-left: 20%;
+        }
+    }
+    @media screen and (max-width: 559px)
+        {
+            .para
+            {
+                margin-left: 0%;
+            }
+        }
