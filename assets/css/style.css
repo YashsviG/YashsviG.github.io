@@ -1,0 +1,189 @@
+
+/*===========================
+    1. COMMON css 
+===========================*/
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700|Hind:400,500,600,700|Quattrocento:400,700");
+body {
+  font-family: 'Hind', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #646464; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+
+i,
+span,
+a {
+  display: inline-block; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Quattrocento', serif;
+  font-weight: 700;
+  color: #121619;
+  margin: 0px; }
+
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
+
+ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #646464;
+  margin: 0px; }
+  @media (max-width: 767px) {
+    p {
+      font-size: 16px; } }
+
+.bg_cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; }
+
+/*===========================
+    2.HEADER css 
+===========================*/
+.header-area {
+  position: relative; }
+  .header-area .shape {
+    position: absolute; }
+  .header-area .header-shape-one {
+    top: 0;
+    left: 0; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .header-area .header-shape-one {
+        width: 230px; } }
+    @media (max-width: 767px) {
+      .header-area .header-shape-one {
+        width: 180px; } }
+  .header-area .header-shape-tow {
+    top: 25px;
+    left: 31%; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .header-area .header-shape-tow {
+        left: 40%; } }
+    @media (max-width: 767px) {
+      .header-area .header-shape-tow {
+        left: 60%;
+        width: 60px; } }
+  .header-area .header-shape-three {
+    left: 70px;
+    bottom: 130px; }
+    @media (max-width: 767px) {
+      .header-area .header-shape-three {
+        width: 90px;
+        bottom: 200px; } }
+  .header-area .header-shape-fore {
+    left: 48%;
+    bottom: -90px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .header-area .header-shape-fore {
+        width: 260px; } }
+    @media (max-width: 767px) {
+      .header-area .header-shape-fore {
+        bottom: -60px;
+        }
+.header-banner {
+  height: 700px;
+  position: relative; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-banner {
+      height: 500px; } }
+  @media (max-width: 767px) {
+    .header-banner {
+      height: 500px; } }
+  .header-banner .banner-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%; }
+  .header-banner .banner-content {
+    position: relative;
+    z-index: 9; }
+    .header-banner .banner-content .sub-title {
+      font-size: 24px;
+      color: #EB3656;
+      text-transform: uppercase; }
+      @media (max-width: 767px) {
+        .header-banner .banner-content .sub-title {
+          font-size: 18px; } }
+    .header-banner .banner-content .banner-title {
+      font-size: 60px; }
+      .header-banner .banner-content .banner-title span {
+        color: #EB3656; }
+      @media (max-width: 767px) {
+        .header-banner .banner-content .banner-title {
+          font-size: 38px; } }
+    .header-banner .banner-content .banner-contact {
+      position: relative;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Barlow', sans-serif;
+      color: #EB3656;
+      text-transform: uppercase;
+      margin-left: 70px; }
+      .header-banner .banner-content .banner-contact::before {
+        position: absolute;
+        content: '';
+        width: 60px;
+        height: 2px;
+        background-color: #EB3656;
+        left: -70px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%); }
