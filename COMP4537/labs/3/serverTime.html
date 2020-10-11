@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 03- COMP4537</title>
+    <script>
+        function submit(){
+          let xhttp = new XMLHttpRequest();
+          xhttp.open("GET", "https://immense-waters-64460.herokuapp.com/?name="+ document.getElementById("inputName").value, true);
+          xhttp.send();
+          xhttp.onreadystatechange = function(){
+              if(this.readyState == 4 && this.status == 200){
+                  document.getElementById("serverResult").innerHTML = this.responseText;
+              }
+          };
+        }
+
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div style="width: 80%; margin: auto; margin-top: 20%;">
+        <div class="input-group">
+            <input type="text" class="form-control" id ="inputName"placeholder="Enter Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" onclick="submit()">Button</button>
+            </div>
+          </div>
+          <div id= "serverResult"></div>
+    </div>
+</body>
+</html>
