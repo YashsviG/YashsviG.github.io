@@ -1,0 +1,17 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lab3/server.js",
+  "scripts": {
+    "start": "node ./lab3/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": "12.16.3"
+  }
+}

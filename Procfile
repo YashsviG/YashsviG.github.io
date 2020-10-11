@@ -1,0 +1,1 @@
+web: node ./lab3/server.js
