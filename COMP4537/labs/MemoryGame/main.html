@@ -1,0 +1,107 @@
+<!-- ========== HTML Start ========== -->
+<!DOCTYPE html>
+<!--
+    ========= YASHSVI GIRDHAR =========
+    ========== MEMORY GAME ============
+    ========== SET: 4S ================
+    ========== A01084035 ==============
+-->
+<html lang="en">
+<!-- ========== Head tag start ========== -->    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ========== TITLE ========== -->
+    <title>Memory Game - YASHSVI</title>
+
+    <!-- ========== STYLE SHEETS ========== -->
+    <link rel='stylesheet' href='./css/gameBlock.css'/>
+    <link rel='stylesheet' href='./css/style.css'/>
+    <link rel='stylesheet' href='./css/leaderBoard.css'/>
+    
+    <!-- ========== BOOTSTRAP ========== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="./js/game.js"></script>
+    <script src="./js/leaderBoard.js"></script>  
+</head>
+<!-- ========== Head tag end ========== -->
+
+<!-- ========== Body Tag Start ========== -->
+<body>
+    <!-- ========== CONTAINER START ========== -->
+    <div class = "container">
+        <!-- ========== SCORE BOARD DIV ========== -->
+        <div id='scoreBoard'>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div>
+                        <p id="scoreText"></p>&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div id='score'> 
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div>
+                        <p id ="levelText"></p> &nbsp;&nbsp;&nbsp; 
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div id='level'></div>
+                </div>
+            </div>
+        </div>
+        <!-- ========== SCORE BOARD DIV End ========== -->
+
+        <!-- ========== GAME BLOCK BOARD ========== -->
+        <div id="gameScene">
+            <div class="game-board" id="game-board"></div>
+        </div>
+        <!-- ========== GAME BLOCK BOARD End ========== -->
+
+        <!-- ========== GAME BUTTONS ========== -->
+        <center>   
+        <div id="buttons">
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <button class ="btn" onclick="start()" id="startBtn"></button>
+                </div>
+        
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <button class ="btn" onclick="restart()" id="restartBtn"></button>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12"> 
+                    <button class ="btn" onclick="terminate()" id="terminateBtn"></button>
+                </div>
+        
+            </div>
+        </div>
+        
+        <!-- ========== GAME BUTTONS End ========== -->
+
+        <!-- ========== PLAYERNAME FORM ========== -->
+        <div class="form" id="cred">    
+        </div>
+        <!-- ========== PLAYERNAME FORM End ========== -->
+        
+        <!-- ========== LEADERBOARD ========== -->
+        <div id = "data">
+        </div>
+        <!-- ========== LEADERBOARD End ========== -->
+        </center>   
+    </div>
+
+    <!-- ========== SCRIPT CONTAINING ALL STRINGS FOR HTML ========== -->
+    <script src = "./js/strings.js"></script>
+</body>
+<!-- ========== Body Tag End ========== -->
+</html>
+<!-- ========== HTML End ========== -->
