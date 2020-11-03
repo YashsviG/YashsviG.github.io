@@ -9,16 +9,6 @@ const db = mysql.createConnection({
   database : "heroku_a332eebd72b6445"
 });
 // mysql://b2a0de87db0290:084aed0a@us-cdbr-east-02.cleardb.com/heroku_a332eebd72b6445?reconnect=true
-const createTable = [
-  'CREATE TABLE IF NOT EXISTS score',
-  '(id INT AUTO_INCREMENT PRIMARY KEY,',
-  'name VARCHAR(255),',
-  'score INT)'
-].join(' ');
-db.query(createTable,(err,result)=>{
-  if(err) throw err;
-  console.log('Table Created');
-});
 // ========== Creating server for inserting and reading from the database ==========  
 let port = process.env.PORT || 8000; 
 http.createServer(function(request,response){
