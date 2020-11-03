@@ -313,7 +313,7 @@ function enableChoose(){
 function Send_Data(){
     let x = new XMLHttpRequest();
     let name = document.getElementById("name").value;
-    x.open("GET", "https://chilling-skeleton-57875.herokuapp.com/?name="+name+"&score="+totalScore,true);
+    x.open("GET", "https://comp4537-assignment.herokuapp.com/?name="+name+"&score="+totalScore,true);
     x.send();
     x.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {

@@ -1,7 +1,7 @@
 {
   "name": "mg",
   "version": "1.0.0",
-  "main": "./js/database.js",
+  "main": "database.js",
   "dependencies": {
     "array-to-txt-file": "^1.0.2",
     "fs": "^0.0.1-security",
@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./js/database.js"
+    "start": "node database.js"
   },
   "author": "",
   "license": "ISC",

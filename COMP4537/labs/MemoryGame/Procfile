@@ -1,1 +1,1 @@
-web: node ./js/database.js
+web: node database.js
