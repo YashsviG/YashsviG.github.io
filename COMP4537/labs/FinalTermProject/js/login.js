@@ -1,7 +1,9 @@
+function getToken() {
+    return "JWT" + " " + localStorage.getItem("token");
+  }
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
-const host = "http://localhost:4000";
-
+const host = "https://comp4537-termproject.herokuapp.com";
 
 
 signUp= () => {
@@ -19,6 +21,7 @@ signUp= () => {
 	}
 
 	let myHeaders = new Headers();
+	
 	myHeaders.append("Content-Type", "application/json");
 
 	let requestOptions = {
@@ -29,7 +32,7 @@ signUp= () => {
 	};
 
 	
-	fetch("http://localhost:4000/api/v1/user/create", requestOptions)
+	fetch("https://comp4537-termproject.herokuapp.com/api/v1/user/create", requestOptions)
 	.then((response) => {
 		if (response.status == 409) throw response.json()
 		window.location.href = "../views/login.html";
@@ -50,15 +53,16 @@ signIn = () => {
 	}
 
 	let myHeaders = new Headers();
-	myHeaders.append("Content-Type", "application/json");
 	
+	myHeaders.append("Content-Type", "application/json");
+
 	let requestOptions = {
 	method: 'POST',
 	body:JSON.stringify(data),
 	headers: myHeaders,
 	redirect: 'follow'
 	};
-	fetch("http://localhost:4000/api/v1/login", requestOptions)
+	fetch("https://comp4537-termproject.herokuapp.com/api/v1/login", requestOptions)
 		.then(response => response.json())
 		.then((result) => {
 			console.log("Hello",result);

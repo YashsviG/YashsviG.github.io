@@ -31,7 +31,7 @@ method: 'GET',
 headers: myHeaders,
 redirect: 'follow'
 };
-fetch("http://localhost:4000/api/v1/meme/"+id, requestOptions)
+fetch("https://comp4537-termproject.herokuapp.com/api/v1/meme/"+id, requestOptions)
 .then((response) => {
     console.log(response.status);
     if(response.status != 200) throw response.json();

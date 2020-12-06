@@ -38,7 +38,7 @@ function getToken() {
       headers: myHeaders,
       redirect: 'follow'
       };
-      fetch("http://localhost:4000/api/v1/user/"+id+"/memePage", requestOptions)
+      fetch("https://comp4537-termproject.herokuapp.com/api/v1/user/"+id+"/memePage", requestOptions)
           .then(response => response.json())
           .then(data=>{console.log(data)
             populateMemeList(data);
@@ -106,7 +106,7 @@ function getToken() {
       headers: myHeaders,
       redirect: 'follow'
       };
-      fetch("http://localhost:4000/api/v1/memePage/"+memeId, requestOptions)
+      fetch("https://comp4537-termproject.herokuapp.com/api/v1/memePage/"+memeId, requestOptions)
           .then(response => response.json())
           .then(data=>{console.log(data)
             window.location.href ="../views/viewMemePage.html"

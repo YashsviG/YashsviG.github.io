@@ -34,7 +34,7 @@ body:JSON.stringify(data),
 headers: myHeaders,
 redirect: 'follow'
 };
-fetch("http://localhost:4000/api/v1/memePage/create", requestOptions)
+fetch("https://comp4537-termproject.herokuapp.com/api/v1/memePage/create", requestOptions)
   .then(response => response.json())
   .then(data=>{console.log(data)
   window.location.href = "../views/Profile.html"

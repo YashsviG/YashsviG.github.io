@@ -20,7 +20,7 @@ getInfo = () => {
     headers: myHeaders,
     redirect: 'follow'
     };
-    fetch("http://localhost:4000/api/v1/user/"+id, requestOptions)
+    fetch("https://comp4537-termproject.herokuapp.com/api/v1/user/"+id, requestOptions)
         .then(response => response.json())
         .then(data=>{console.log(data)
         name.val(data.username)
@@ -55,7 +55,7 @@ mode:'cors',
 headers: myHeaders,
 redirect: 'follow'
 };
-fetch("http://localhost:4000/api/v1/user/"+id, requestOptions)
+fetch("https://comp4537-termproject.herokuapp.com/api/v1/user/"+id, requestOptions)
     .then(response => response.json())
     .catch(error => console.log('error', error));
   getInfo();
@@ -74,7 +74,7 @@ deleteInfo = () => {
   headers: myHeaders,
   redirect: 'follow'
   };
-  fetch("http://localhost:4000/api/v1/user/"+id, requestOptions)
+  fetch("https://comp4537-termproject.herokuapp.com/api/v1/user/"+id, requestOptions)
       .then(response => {response.json()
       window.location.href = "../views/login.html"}
       )
