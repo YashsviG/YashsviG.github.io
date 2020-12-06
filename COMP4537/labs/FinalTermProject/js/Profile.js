@@ -32,8 +32,10 @@ getInfo = () => {
 };
 getInfo();
 
-updateInfo=()=>{
+updateInfo = () => {
+  console.log("IN save changes");
   let id = localStorage.getItem("id");
+  console.log("ID", id);
   let name = $("#name").val()
   let email = $("#email").val()
   let pass = $("#password").val()
@@ -51,14 +53,14 @@ myHeaders.append("Authorization",getToken())
 let requestOptions = {
 method: 'PUT',
 body:JSON.stringify(data),
-mode:'cors',
 headers: myHeaders,
 redirect: 'follow'
 };
 fetch("https://comp4537-termproject.herokuapp.com/api/v1/user/"+id, requestOptions)
     .then(response => response.json())
+    .then(getInfo())
     .catch(error => console.log('error', error));
-  getInfo();
+     
 
 }
 
