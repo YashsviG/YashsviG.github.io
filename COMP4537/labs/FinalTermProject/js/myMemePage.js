@@ -1,11 +1,36 @@
-if(!localStorage.getItem("token") || !localStorage.getItem("userId") ){
-    alert("Logged out");
-    window.location.href = "../views/login.html";
-}
-const token = `JWT ${localStorage.getItem("token")}`
-const userId = localStorage.getItem("userId");
+const JWT = "JWT";
+const tokenString ="token";
 
-const container = $("#myQuizzes");
+const signUpString = "signUp";
+const signInString = "signIn";
+
+const user_id = "userId";
+const logOut = "Logged out";
+const MEME_ID = "MEMEID";
+const descId = "#description";
+const titleId = '#title';
+
+const containerID = "#myQuizzes";
+
+const Content_Type = "Content-Type";
+const application_type =  "application/json";
+const Authorization = "Authorization";
+
+const method = 'GET';
+const redirect = "follow";
+
+const url = "https://comp4537-termproject.herokuapp.com/api/v1/memeList";
+const view = "../views/login.html";
+const errorString = "error";
+
+if(!localStorage.getItem(tokenString) || !localStorage.getItem(user_id) ){
+    alert(logOut);
+    window.location.href = view;
+}
+const token = `JWT ${localStorage.getItem(tokenString)}`
+const userId = localStorage.getItem(user_id);
+
+const container = $(containerID);
 
 let populateMyMemePage = (memePage)=>{
     memePage.forEach((memePage)=>{
@@ -14,7 +39,6 @@ let populateMyMemePage = (memePage)=>{
         <p>${memePage.description}</p>
         </div>`);
         viewMemePage.click(()=>{
-            console.log("Quiz", meme.id, "clicked!");
             window.location.href = `../views/editMeme.html/?memePage=${meme.id}`
         })
         container.append(viewMemePage);
@@ -23,13 +47,13 @@ let populateMyMemePage = (memePage)=>{
 
 
 let myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", token);
+myHeaders.append(Content_Type, application_type);
+myHeaders.append(Authorization, token);
 
 let requestOptions = {
-method: 'GET',
+method: method,
 headers: myHeaders,
-redirect: 'follow'
+redirect: redirect
 };
 fetch(`https://comp4537-termproject.herokuapp.com/api/v1/user/${userId}/memePage`, requestOptions)
 .then((response) => {
@@ -40,7 +64,6 @@ fetch(`https://comp4537-termproject.herokuapp.com/api/v1/user/${userId}/memePage
 .then((result) => {
     console.log(result);
     populateMyMemePage(result);
-    //Populate Quizzes
 })
 .catch(error => error.then(msg => alert(msg.message)));
 
